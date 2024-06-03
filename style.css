@@ -1,0 +1,330 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #1f2937;
+  --light: #e5e7eb;
+  --button: #3882f6;
+  --light-text: #e5e7eb;
+  --white: #f9faf8;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+
+/* Header */
+.header__container {
+  background-color: var(--dark);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.header__logo {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header__links {
+  font-size: 1.25rem;
+  color: var(--light-text);
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+/* Hero */
+h1 {
+  font-size: 4rem;
+  color: var(--white);
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark);
+  gap: 3rem;
+  padding: 0 3rem 5rem;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  margin: 0 0 0.5rem;
+}
+
+.hero__description {
+  margin-bottom: 1rem;
+}
+
+.hero__button {
+  max-width: 8rem;
+  background-color: var(--button);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.hero__button:hover {
+  cursor: pointer;
+  color: var(--light-text);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.hero__image {
+  max-width: 50rem;
+  flex: 1;
+}
+
+/* Information */
+.information__container {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.information__container__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.information__cards__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 50rem;
+  margin-bottom: 2rem;
+}
+
+.information__card {
+  display: flex;
+  gap: 1rem;
+}
+
+.information__card--image figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  margin: 0;
+}
+
+.information__card--image figure img {
+  border: 3px var(--button) solid;
+  border-radius: 1rem;
+}
+
+.information__card--image figure figcaption {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+/* Testimonial */
+
+.testimonial__container {
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.testimonial__text {
+  max-width: 30rem;
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--dark);
+  font-weight: 300;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.testimonial__author {
+  max-width: 30rem;
+  text-align: right;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 5rem;
+}
+
+.cta__container {
+  display: flex;
+  background-color: var(--button);
+  margin: 5rem 0;
+  padding: 3rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  border-radius: 1rem;
+}
+
+.cta__header {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cta__description {
+  color: var(--light-text);
+  margin: 0;
+}
+
+.cta__button {
+  border: 2px solid var(--white);
+  padding: 0.5rem 3rem;
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 0.75rem;
+}
+
+.cta__button:hover {
+  cursor: pointer;
+  color: white;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Footer */
+.footer__container {
+  background-color: var(--dark);
+  color: var(--light-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.footer__text {
+  margin: 0;
+}
+.footer__text a {
+  color: hsl(217, 91%, 78%);
+  font-weight: 600;
+}
