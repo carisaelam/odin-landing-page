@@ -1,2 +1,4 @@
-# odin-landing-page
-Landing page CSS practice project from TOP 
+# Landing page CSS practice project from TOP 
+
+For this project, I was tasked with building an entire web page based on a provided design. The design consisted of two images: one showcasing the complete website layout and another detailing the fonts and colors used. While the task presented challenges, the skills I had acquired throughout our lessons equipped me for the task at hand. I didn't hesitate to use Google or revisit previous lessons for guidance, as even seasoned developers frequently rely on online resources. Some minor details may not have been covered in our lessons intentionally, but these were easily researched. My aim was to replicate the design as closely as possible, though perfection wasn't the goal; I focused on positioning elements correctly rather than achieving pixel-perfect precision.
+
